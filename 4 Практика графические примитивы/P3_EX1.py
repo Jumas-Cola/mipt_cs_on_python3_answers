@@ -1,0 +1,91 @@
+import graphics as gr
+
+window = gr.GraphWin("window", 1000, 500)
+
+sky = gr.Rectangle(gr.Point(0,0), gr.Point(1000,300))
+sky.setFill('blue')
+
+cloud_1 = gr.Circle(gr.Point(50, 65), 20)
+cloud_2 = gr.Circle(gr.Point(70, 60), 20)
+cloud_3 = gr.Circle(gr.Point(90, 70), 20)
+cloud_4 = gr.Circle(gr.Point(110, 60), 20)
+cloud_5 = gr.Circle(gr.Point(60, 50), 20)
+cloud_6 = gr.Circle(gr.Point(80, 45), 20)
+cloud_7 = gr.Circle(gr.Point(100, 50), 20)
+for x in [cloud_1, cloud_2, cloud_3, cloud_4, cloud_5, cloud_6, cloud_7]:
+	x.setFill('white')
+	x.setOutline('white')
+
+vigvam_1 = gr.Polygon(gr.Point(150,400), gr.Point(275,150), gr.Point(400,400))
+vigvam_1.setFill('red')
+vigvam_1.setWidth(3)
+vigvam_2 = gr.Circle(gr.Point(275, 350), 30)
+vigvam_2.setFill('black')
+vigvam_3 = gr.Line(gr.Point(275, 150), gr.Point(300, 100))
+vigvam_3.setOutline('black')
+vigvam_3.setWidth(3)
+vigvam_4 = gr.Line(gr.Point(275, 150), gr.Point(250, 90))
+vigvam_4.setOutline('black')
+vigvam_4.setWidth(3)
+
+tree_1 = gr.Rectangle(gr.Point(440,200), gr.Point(460,350))
+tree_1.setFill('brown')
+tree_2 = gr.Polygon(gr.Point(400,150), gr.Point(450,250), gr.Point(500,150))
+tree_2.setFill('green')
+
+tree_3 = gr.Rectangle(gr.Point(540,200), gr.Point(560,400))
+tree_3.setFill('brown')
+tree_4 = gr.Polygon(gr.Point(500,200), gr.Point(550,300), gr.Point(600,200))
+tree_4.setFill('green')
+
+totem_1 = gr.Rectangle(gr.Point(720,400), gr.Point(800,450))
+totem_1.setFill('brown')
+totem_2 = gr.Circle(gr.Point(760, 400), 40)
+totem_2.setFill('brown')
+totem_3 = gr.Polygon(gr.Point(720,320), gr.Point(760,420), gr.Point(800,320))
+totem_3.setFill('brown')
+totem_4 = gr.Rectangle(gr.Point(720,250), gr.Point(800,320))
+totem_4.setFill('brown')
+totem_5 = gr.Polygon(gr.Point(720,250), gr.Point(760,150), gr.Point(800,250))
+totem_5.setFill('brown')
+totem_6 = gr.Circle(gr.Point(760,150), 40)
+totem_6.setFill('brown')
+totem_7 = gr.Rectangle(gr.Point(720,120), gr.Point(800,100))
+totem_7.setFill('brown')
+
+sun = gr.Circle(gr.Point(900, 70), 40)
+sun.setFill('yellow')
+sun.setOutline('yellow')
+
+
+
+
+
+sky.draw(window)
+cloud_1.draw(window)
+cloud_2.draw(window)
+cloud_3.draw(window)
+cloud_4.draw(window)
+cloud_5.draw(window)
+cloud_6.draw(window)
+cloud_7.draw(window)
+vigvam_1.draw(window)
+vigvam_2.draw(window)
+vigvam_3.draw(window)
+vigvam_4.draw(window)
+tree_1.draw(window)
+tree_2.draw(window)
+tree_3.draw(window)
+tree_4.draw(window)
+totem_1.draw(window)
+totem_2.draw(window)
+totem_3.draw(window)
+totem_4.draw(window)
+totem_5.draw(window)
+totem_6.draw(window)
+totem_7.draw(window)
+sun.draw(window)
+
+window.getMouse()
+
+window.close()
