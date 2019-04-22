@@ -1,19 +1,6 @@
 import graphics as gr
 import re
 
-
-#Получение координат в текущий момент времени
-def get_circle_coords(circle):
-    coords = list(map(lambda x: float(x), re.findall(r'Point+.*\),+', str(circle))[0].rstrip('),').lstrip('Point(').split(',')))
-    return gr.Point(coords[0], coords[1])
-
-#Проверка выхода за границы поля
-def check_coords(coords, velocity):
-    if coords.x>= SIZE_X or coords.x<=0:
-        velocity.x = -velocity.x
-    if coords.y>= SIZE_Y or coords.y<=0:
-        velocity.y = -velocity.y
-
 #Функция сложения координат двух точек
 def add(point_1, point_2):
     new_point = gr.Point(point_1.x + point_2.x,
@@ -67,8 +54,7 @@ while True:
 
     acceleration = update_acceleration(coords, gr.Point(400, 400))
 
-    coords = get_circle_coords(circle)
+    coords = circle.getCenter()
     velocity = update_velocity(velocity, acceleration)
-    check_coords(coords, velocity)
 
     gr.time.sleep(0.02)
