@@ -6,7 +6,7 @@ def upd_cell():
                 if j > 0 : cell[i][j-1] = '+'
                 if i > 0 : cell[i-1][j] = '+'
                 if j > 0 and i > 0: cell[i-1][j-1] = '+'
-            if cell[i][j] == ' ':
+            elif cell[i][j] == ' ':
                 if j + 1 == M and i + 1 != N and cell[i+1][j] == '+':
                     cell[i][j] = '-'
                 elif i + 1 == N and j + 1 != M and cell[i][j+1] == '+':
