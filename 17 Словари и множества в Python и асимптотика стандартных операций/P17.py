@@ -123,14 +123,31 @@ cwd = os.path.dirname(os.path.abspath(__file__))
 
 
 # Упражнение 8
-with open(os.path.join(cwd, 'task7_en-ru.txt'), encoding='utf-8') as inp:
-    en_ru = {s.split('	-	')[0]: s.split('	-	')[1].strip().split(',') for s in inp.readlines()}
-with open(os.path.join(cwd, 'task7_ru-en.txt'), encoding='utf-8') as inp:
-    ru_en = {s.split('	-	')[0]: s.split('	-	')[1].strip().split(',') for s in inp.readlines()}
-
-for en_word in en_ru:
-    for ru_word in en_ru[en_word]:
-        if ru_word not in ru_en:
-            ru_en[ru_word] = en_word
-
-print(ru_en)
+# with open(os.path.join(cwd, 'task7_en-ru.txt'), encoding='utf-8') as inp:
+#     en_ru = {s.split('	-	')[0]: s.split('	-	')[1].strip().split(',') for s in inp.readlines()}
+# with open(os.path.join(cwd, 'task7_ru-en.txt'), encoding='utf-8') as inp:
+#     ru_en = {s.split('	-	')[0]: s.split('	-	')[1].strip().split(',') for s in inp.readlines()}
+#
+# for en_word in en_ru:
+#     for ru_word in en_ru[en_word]:
+#         if ru_word not in ru_en:
+#             ru_en[ru_word] = [en_word]
+#         else:
+#             if en_word not in ru_en[ru_word]:
+#                 ru_en[ru_word].append(en_word)
+#
+# for ru_word in ru_en:
+#     for en_word in ru_en[ru_word]:
+#         if en_word not in en_ru:
+#             en_ru[en_word] = [ru_word]
+#         else:
+#             if ru_word not in en_ru[en_word]:
+#                 en_ru[en_word].append(ru_word)
+#
+# with open(os.path.join(cwd, 'task7_ru_en.txt'), 'w', encoding='utf-8') as out:
+#     for i in sorted(ru_en.keys()):
+#         out.write(f'{i}	-	{", ".join(ru_en[i])}\n')
+#
+# with open(os.path.join(cwd, 'task7_en_ru.txt'), 'w', encoding='utf-8') as out:
+#     for i in sorted(en_ru.keys()):
+#         out.write(f'{i}	-	{", ".join(en_ru[i])}\n')
